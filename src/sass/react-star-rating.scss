@@ -3,9 +3,10 @@
 .react-star-rating__star {
   width: 25px;
   #star-flat {
-    fill: #C6C6C6;
+    // fill: #C6C6C6;
+    fill: #00FF00;
     &:hover {
-      fill: #FFA91B;
+      fill: #0000FF;
     }
   }
 }
@@ -18,13 +19,16 @@
     &:hover {
       cursor: pointer;
     }
-  }  
+  }
 }
 .rating-container {
   position: relative;
   vertical-align: middle;
   display: inline-block;
   color: #e3e3e3;
+  -webkit-text-fill-color: #fff; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.8px;
+  -webkit-text-stroke-color: #42d155;
   overflow: hidden;
   &:before {
     content: attr(data-content);
@@ -35,7 +39,8 @@
     top: 0;
     white-space: nowrap;
     overflow: hidden;
-    color: #F5A71B;
+    color: #42d155;
+    -webkit-text-fill-color: #42d155; /* Will override color (regardless of order) */
     @include transition(all 0.01s);
     -webkit-mask-image: -webkit-gradient(linear,left top,left bottom,from(#FDBD47),to(#F5A71B));
     &:before {
